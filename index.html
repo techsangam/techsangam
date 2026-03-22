@@ -2,176 +2,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anurag Mishra</title>  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">  <style>
-    :root {
-      --bg: #0a0f1c;
-      --card: #111827;
-      --accent: #38bdf8;
-      --accent2: #22c55e;
-      --text: #e5e7eb;
-      --muted: #94a3b8;
-    }
-
+  <title>Anurag Mishra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-    }
+    }body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  overflow-x: hidden;
+}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-    }
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
 
-    header {
-      text-align: center;
-      padding: 100px 20px 80px;
-    }
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #cbd5f5;
+  transition: 0.3s;
+}
 
-    header h1 {
-      font-size: 3.2rem;
-      color: var(--accent);
-      animation: fadeIn 1s ease-in-out;
-    }
+nav a:hover {
+  color: white;
+}
 
-    header p {
-      margin-top: 15px;
-      color: var(--muted);
-      font-size: 1.2rem;
-    }
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
 
-    .btn {
-      margin-top: 25px;
-      display: inline-block;
-      padding: 12px 26px;
-      background: linear-gradient(45deg, var(--accent), var(--accent2));
-      color: #000;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
 
-    section {
-      margin-top: 70px;
-    }
+.btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      color: var(--accent2);
-    }
+.btn:hover {
+  transform: scale(1.05);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.section {
+  padding: 100px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 14px;
-      transition: 0.3s;
-      border: 1px solid #1f2937;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-    }
+.card {
+  padding: 25px;
+  transition: 0.3s;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: var(--accent);
-    }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-    .quote {
-      background: var(--card);
-      padding: 25px;
-      border-left: 4px solid var(--accent2);
-      border-radius: 10px;
-      font-style: italic;
-      color: var(--muted);
-    }
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 80px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  </style></head><body>  <div class="container"><header>
-  <h1>👋 Anurag Mishra</h1>
-  <p>Building systems. Thinking deeply. Improving daily.</p>
-  <a href="https://github.com/anuragmishra-devdb" class="btn">Explore My Work</a>
-</header>
-
-<section>
-  <h2>🧠 About Me</h2>
-  <p>
-    I am not here just to use technology. I am here to understand how it works.
-    I focus on clarity, fundamentals, and long-term growth.
-  </p>
-</section>
-
-<section>
-  <h2>⚙️ Focus</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Problem Solving</h3>
-      <p>Breaking complexity into simple logic.</p>
-    </div>
-
-    <div class="card">
-      <h3>System Thinking</h3>
-      <p>Understanding underlying structures.</p>
-    </div>
-
-    <div class="card">
-      <h3>Consistency</h3>
-      <p>Daily improvement over random effort.</p>
-    </div>
-
+  </style>
+</head>
+<body><header class="glass">
+  <h2>Anurag</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><section class="hero" id="home">
+  <h1>Hi, I'm Anurag Mishra</h1>
+  <p>Building ideas into reality. Exploring tech & systems.</p>
+  <button class="btn" onclick="scrollToSection('projects')">View Work</button>
+</section><section class="section fade-in" id="about">
+  <div class="glass" style="padding:40px;">
+    <h2>About Me</h2>
+    <p style="margin-top:10px; color:#cbd5f5;">
+      I focus on solving real-world problems with systems, logic, and technology.
+      Always learning, always building.
+    </p>
   </div>
-</section>
-
-<section>
-  <h2>📈 Philosophy</h2>
-  <div class="quote">
-    Most people chase tools. I focus on thinking.<br><br>
-    Most people want quick results. I focus on long-term clarity.
+</section><section class="section fade-in" id="projects">
+  <h2 style="margin-bottom:20px;">Projects</h2>
+  <div class="cards">
+    <div class="card glass">
+      <h3>Project One</h3>
+      <p>Smart system idea or automation.</p>
+    </div>
+    <div class="card glass">
+      <h3>Project Two</h3>
+      <p>Data + logic driven solution.</p>
+    </div>
+    <div class="card glass">
+      <h3>Project Three</h3>
+      <p>Experimental or learning project.</p>
+    </div>
   </div>
-</section>
+</section><section class="section fade-in" id="contact">
+  <div class="glass" style="padding:40px; text-align:center;">
+    <h2>Contact</h2>
+    <p style="margin-top:10px; color:#cbd5f5;">Connect with me on GitHub</p>
+    <button class="btn" onclick="window.open('https://github.com/', '_blank')">GitHub</button>
+  </div>
+</section><footer>
+  © 2026 Anurag Mishra. Built with focus.
+</footer><script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
 
-<section>
-  <h2>🎯 Direction</h2>
-  <p>
-    Building real understanding and creating meaningful work,
-    not just surface-level output.
-  </p>
-</section>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
 
-<footer>
-  <p>© 2026 Anurag Mishra</p>
-</footer>
-
-  </div></body>
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script></body>
 </html>
